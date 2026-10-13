@@ -1,0 +1,26 @@
+:root {
+  --ion-font-family: 'Segoe UI', Inter, ui-sans-serif, system-ui, sans-serif;
+  --ion-color-primary: #123f35;
+  --ion-color-primary-rgb: 18,63,53;
+  --ion-color-primary-contrast: #fff;
+  --ion-color-primary-shade: #10372f;
+  --ion-color-primary-tint: #2a5249;
+  --ion-color-secondary: #e9bd39;
+  --ion-color-secondary-rgb: 233,189,57;
+  --ion-color-secondary-contrast: #182721;
+  --ion-color-secondary-shade: #cda632;
+  --ion-color-secondary-tint: #ebc44d;
+  --ion-background-color: #fff;
+  --ion-text-color: #212622;
+  --app-surface: #fff;
+  --app-muted: #717773;
+  --app-border: #e3e6e3;
+  --app-ink: #212622;
+  --app-soft: #f4f6f4;
+}
+ion-toolbar { --background:#fff; --border-color:var(--app-border); --min-height:76px; }
+ion-tab-bar { --background:#fff; --border:1px solid var(--app-border); height:68px; padding-bottom:env(safe-area-inset-bottom); }
+ion-tab-button { --color:#747a76; --color-selected:#123f35; font-size:11px; }
+ion-tab-button.tab-selected { border-top:2px solid #e9bd39; }
+ion-button { --border-radius:6px; --box-shadow:none; text-transform:none; font-weight:600; letter-spacing:0; }
+ion-header { box-shadow:none!important; border-bottom:1px solid var(--app-border); }
