@@ -41,7 +41,7 @@ function disposeModel(root: THREE.Object3D) {
 }
 function reset() {
   if (!camera || !controls) return
-  camera.position.set(distance * 0.75, distance * 0.4, distance * 0.85)
+  camera.position.set(distance * 0.75, distance * 0.4, -distance * 0.85)
   controls.target.set(0, 0.65, 0)
   controls.update()
 }
@@ -130,7 +130,7 @@ onMounted(async () => {
     // Fit the bounding sphere to the narrower camera dimension, including mobile portrait.
     const vertical = THREE.MathUtils.degToRad(camera.fov / 2)
     const horizontal = Math.atan(Math.tan(vertical) * camera.aspect)
-    distance = 2.25 / Math.sin(Math.min(vertical, horizontal)) / 1.2
+    distance = 2.25 / Math.sin(Math.min(vertical, horizontal)) / (camera.aspect < 1.2 ? 1.1 : 1.65)
     controls.minDistance = 3
     controls.maxDistance = distance * 2.5
     reset()
